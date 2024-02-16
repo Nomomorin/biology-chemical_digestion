@@ -1,0 +1,65 @@
+
+.two_h1 {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      font-family: "Raleway", sans-serif;
+      font-weight: 300;
+      font-size: 40px;
+      color: #080808;
+      -webkit-transition: all 0.4s ease 0s;
+      -o-transition: all 0.4s ease 0s;
+      transition: all 0.4s ease 0s;
+    }
+    
+    .two_h1 span {
+      display: block;
+      font-size: 0.5em;
+      line-height: 1.3;
+    }
+
+
+/* === HEADING STYLE #2 === */
+.two h1 {
+      text-transform: capitalize;
+    }
+    .two h1:before {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 60px;
+      height: 2px;
+      content: "";
+      background-color: #c50000;
+    }
+    
+    .two h1 span {
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      line-height: 3em;
+      padding-left: 0.25em;
+      color: rgba(0, 0, 0, 0.4);
+      padding-bottom: 10px;
+    }
+    .alt-two h1 {
+      text-align:center;
+    }
+    .alt-two h1:before {
+      left:50%; margin-left:-30px;
+    }
+
+.bord_div {
+      background: #f8f8f8;
+      padding: 2em;
+      margin: 1.5em auto;
+      border: 3px solid rgba(0, 0, 0, 0.08);
+    }
+
+.bg {
+      position: fixed;
+      top: 0;
+      width: 150%;
+      z-index: -1;
+}

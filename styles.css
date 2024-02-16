@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Prompt', sans-serif;
+}
+
+body {
+  overflow: hidden; /* ซ่อนเนื้อหาที่เกินขอบเขตของหน้าจอ */
+  margin: 0; /* กำหนดขอบเขตของเนื้อหาให้ไม่มีช่องว่าง */
+  padding: 0;
+}
+
+
+.falling-text {
+  position: absolute; /* ตั้งค่าตำแหน่งเป็น absolute เพื่อให้สามารถเคลื่อนไหวได้โดยอิสระ */
+  top: -100px; /* เริ่มต้นที่ตำแหน่งบนสุดของหน้าจอ */
+  left: 50%; /* จัดตำแหน่งตามแนวนอน */
+  transform: translateX(-50%); /* จัดตำแหน่งตามแนวนอนโดยให้อยู่ตรงกลาง */
+  font-size: 24px; /* ขนาดตัวอักษร */
+  z-index: -1;
+}
+
+.falling {
+  animation: fallDown 5s linear forwards; /* เล่น animation fallDown เป็นเวลา 5 วินาที */
+}
+
+@keyframes fallDown {
+  from {
+      top: -100px; /* ตำแหน่งเริ่มต้นของ animation ที่ตำแหน่งบนสุดของหน้าจอ */
+  }
+  to {
+      top: 100vh; /* ตำแหน่งสุดท้ายของ animation ที่ตำแหน่งของพื้นที่มองเห็นทั้งหมดของหน้าจอ */
+  }
+}
+
+.options {
+  margin-top: 20px; /* ขยับห่างจากด้านบน 20px */
+}
+
+.options button {
+  margin: 0 5px; /* ขยับห่างจากขอบด้านซ้ายและขวาของปุ่ม 5px */
+  padding: 8px 20px; /* ขนาดของขอบของปุ่ม */
+  font-size: 16px; /* ขนาดตัวอักษร */
+  cursor: pointer; /* เปลี่ยนรูปแบบเมาส์เป็น cursor */
+}
+
+#score {
+ /*  margin-top: 20px; */ /* ขยับห่างจากด้านบน 20px */
+ font-size: 20px;
+}
+
+#game-over {
+  font-size: 200%; /* ขนาดตัวอักษร */
+  color: red; /* สีของข้อความ */
+  position: absolute; /* ตั้งค่าตำแหน่งเป็น absolute เพื่อให้สามารถเคลื่อนไหวได้โดยอิสระ */
+  top: 65%; /* จัดตำแหน่งตามแนวตั้งที่ 50% ของหน้าจอ */
+  left: 50%; /* จัดตำแหน่งตามแนวนอนที่ 50% ของหน้าจอ */
+  transform: translate(-50%, -50%); /* จัดตำแหน่งตามแนวนอนและแนวตั้งโดยให้อยู่ตรงกลาง */
+}
+
+
+.center_to_screen {
+  position: absolute; /* ตั้งค่าตำแหน่งเป็น absolute เพื่อให้สามารถเคลื่อนไหวได้โดยอิสระ */
+  top: 50%; /* จัดตำแหน่งตามแนวตั้งที่ 50% ของหน้าจอ */
+  left: 50%; /* จัดตำแหน่งตามแนวนอนที่ 50% ของหน้าจอ */
+  transform: translate(-50%, -50%); /* จัดตำแหน่งตามแนวนอนและแนวตั้งโดยให้อยู่ตรงกลาง */
+}
+
+.center_to_screen button {
+  font-size: 300%;
+}
+
+.hidden {
+  display: none; 
+}
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  background-color: #333;
+  color: #f8f9fa;
+  
+}
+
+@keyframes upDown {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform:  scale(1);
+  }
+}
+.biology-button {
+  background-color: #9B30FF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  animation: upDown 2s infinite;
+}
+
+.biology-button:hover {
+  background-color: #7F22CE;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.biology-button i {
+  margin-right: 5px;
+}
+.biology-button {
+  /* ... styles from previous example ... */
+  animation: pulse 2s infinite;
+}
+
+@keyframes combo {
+  0% {
+    transform: rotate(-20deg) scale(1);
+  }
+  50% {
+    transform: rotate(-20deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(-20deg) scale(1);
+  }
+}
+
+
+
+
+
+
+.combo {
+  position: absolute; /* ตั้งค่าตำแหน่งเป็น absolute เพื่อให้สามารถเคลื่อนไหวได้โดยอิสระ */
+  top: 25%; /* จัดตำแหน่งตามแนวตั้งที่ 50% ของหน้าจอ */
+  left: 25%; /* จัดตำแหน่งตามแนวนอนที่ 50% ของหน้าจอ */
+  transform: translate(-50%, -50%); /* จัดตำแหน่งตามแนวนอนและแนวตั้งโดยให้อยู่ตรงกลาง */
+  animation: combo 2s infinite;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .combo {
+    position: absolute; /* ตั้งค่าตำแหน่งเป็น absolute เพื่อให้สามารถเคลื่อนไหวได้โดยอิสระ */
+    top: 15%; /* จัดตำแหน่งตามแนวตั้งที่ 50% ของหน้าจอ */
+    left: 15%; /* จัดตำแหน่งตามแนวนอนที่ 50% ของหน้าจอ */
+    transform: translate(-50%, -50%); /* จัดตำแหน่งตามแนวนอนและแนวตั้งโดยให้อยู่ตรงกลาง */
+    animation: combo 2s infinite;
+  }
+}
