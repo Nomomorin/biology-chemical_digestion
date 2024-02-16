@@ -151,7 +151,7 @@ function checkAnswer(answer) {
         score = score + score_combo;
         scoreValue.textContent = score;
         nextQuestion();
-        var audio = new Audio('/public/audio/ward.mp3');
+        var audio = new Audio('public/audio/ward.mp3');
             audio.volume = 0.1
             audio.play();
     } else {
@@ -179,7 +179,7 @@ function resetGame() {
     score = 0; // รีเซ็ตคะแนน
     
 }
-var audio = new Audio('/public/audio/bg.mp3');
+var audio = new Audio('public/audio/bg.mp3');
 function startGame() {
     audio.volume = 0.1
     audio.loop = true;
